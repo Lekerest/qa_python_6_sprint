@@ -5,3 +5,5 @@
 !*.py
 !*/**/*.py
 !Tests/
+!locators/
+!pages/

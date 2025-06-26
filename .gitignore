@@ -1,7 +1,7 @@
 *
 !.gitignore
-!.md
-!.txt
+!*.md
+!*.txt
 !src/
 !*.py
 !*/**/*.py

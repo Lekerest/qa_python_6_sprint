@@ -2,9 +2,9 @@
 !.gitignore
 !*.md
 !*.txt
-!src/
-!*.py
 !*/**/*.py
+!*.py
+!src/
 !Tests/
 !locators/
 !pages/

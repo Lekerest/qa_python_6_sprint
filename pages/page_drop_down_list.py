@@ -1,8 +1,10 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+from locators.base_page_locators import LocatorsGeneral
+import allure
 
-class LoginPageMesto:
-    driver = webdriver.Firefox()  # вместо Chrome()
-    driver.get("https://qa-scooter.praktikum-services.ru/")
-    driver.maximize_window()
-    driver.quit()
+class BasePage:
+    def __init__(self, driver):
+        self.driver = driver
+
+    @allure.step('Принять куки')
+    def click_on_button_cookie_accept(self, driver):
+        return driver.find_element(*LocatorsGeneral.BUTTON_COOKIE_ACCEPT).click()

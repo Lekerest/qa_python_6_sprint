@@ -24,7 +24,6 @@ class FAQDropDownList:
     SEVENTH_ANSWER = 'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.'
     EIGHTH_ANSWER = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'
 
-
     FaqList = {
     FIRST_QUESTION : FIRST_ANSWER,
     SECOND_QUESTION : SECOND_ANSWER,
@@ -40,13 +39,28 @@ class DataUser:
     Metro = [LocatorsOrderDelivery.BUTTON_STATION_BULVAR_ROCOSOVSKOGO, LocatorsOrderDelivery.BUTTON_STATION_CHERKIZOVKAYA]
     Colour = {
         'Grey' : LocatorsOrderDelivery.CHECKBOX_COLOR_SCOOTER_GREY,
-        'Black' : LocatorsOrderDelivery.CHECKBOX_COLOR_SCOOTER_BLACK
-    }
+        'Black' : LocatorsOrderDelivery.CHECKBOX_COLOR_SCOOTER_BLACK}
+
+    Rental = {
+        1 : LocatorsOrderDelivery.BUTTON_ONE_DAY,
+        2 : LocatorsOrderDelivery.BUTTON_TWO_DAY}
+
     FirstUserData = {
         'Name' : 'Иван',
         'Surname': 'Иванов',
         'Address': 'Иванова 12',
         'Metro': Metro[0],
         'Telephone': 112233445566,
-        'Date': '1.1.35',
-        'Colour': Colour['Grey'],}
+        'Date': '04.01.2035',
+        'Colour': Colour['Grey'],
+        'Rental Period' : Rental[1],}
+
+    SecondUserData = {
+        'Name' : 'Максим',
+        'Surname': 'Максимов',
+        'Address': 'Макса 153',
+        'Metro': Metro[1],
+        'Telephone': 661122334455,
+        'Date': '29.05.2025',
+        'Colour': Colour['Black'],
+        'Rental Period' : Rental[2],}

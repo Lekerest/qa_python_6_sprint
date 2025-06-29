@@ -9,3 +9,4 @@
 !locators/
 !pages/
 !allure_results/*
+!allure_results

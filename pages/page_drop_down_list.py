@@ -15,6 +15,5 @@ class PageDropDownList:
     def click_on_the_question(self, locator):
         return self.driver.find_element(*locator).click()
 
-    def get_text_question(self, locator):
+    def get_text_faq(self, locator):
         return self.driver.find_element(*locator).text
-

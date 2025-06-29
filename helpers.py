@@ -1,3 +1,6 @@
+from locators.locators_order_delivery import LocatorsOrderDelivery
+
+
 class FAQDropDownList:
     FIRST_QUESTION = 'Сколько это стоит? И как оплатить?'
     SECOND_QUESTION = 'Хочу сразу несколько самокатов! Так можно?'
@@ -31,3 +34,19 @@ class FAQDropDownList:
     SIXTH_QUESTION : SIXTH_ANSWER,
     SEVENTH_QUESTION : SEVENTH_ANSWER,
     EIGHTH_QUESTION : EIGHTH_ANSWER}
+
+class DataUser:
+
+    Metro = [LocatorsOrderDelivery.BUTTON_STATION_BULVAR_ROCOSOVSKOGO, LocatorsOrderDelivery.BUTTON_STATION_CHERKIZOVKAYA]
+    Colour = {
+        'Grey' : LocatorsOrderDelivery.CHECKBOX_COLOR_SCOOTER_GREY,
+        'Black' : LocatorsOrderDelivery.CHECKBOX_COLOR_SCOOTER_BLACK
+    }
+    FirstUserData = {
+        'Name' : 'Иван',
+        'Surname': 'Иванов',
+        'Address': 'Иванова 12',
+        'Metro': Metro[0],
+        'Telephone': 112233445566,
+        'Date': '1.1.35',
+        'Colour': Colour['Grey'],}

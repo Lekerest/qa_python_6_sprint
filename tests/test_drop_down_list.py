@@ -1,6 +1,5 @@
 import pytest
 from locators.locators_drop_down_list import LocatorsDropDownList
-from pages.base_page import BasePage
 from pages.page_drop_down_list import PageDropDownList
 from helpers import FAQDropDownList
 
@@ -21,9 +20,7 @@ class TestDropDownList:
         ]
     )
     def test_drop_down_list(self, driver, locator_question, locator_answer, question):
-        general = BasePage(driver)
         methods_drop_down_list = PageDropDownList(driver)
-        general.click_on_button_cookie_accept()
         methods_drop_down_list.scroll_to_element(locator_question)
         methods_drop_down_list.click_on_the_question(locator_question)
 

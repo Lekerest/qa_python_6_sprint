@@ -2,6 +2,7 @@ import allure
 import pytest
 from locators.locators_order_delivery import LocatorsOrderDelivery
 from pages.page_order import PageOrder
+from pages.base_page import BasePage
 from helpers import DataUser
 
 

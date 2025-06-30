@@ -1,3 +1,4 @@
+import allure
 import pytest
 from locators.locators_drop_down_list import LocatorsDropDownList
 from pages.page_drop_down_list import PageDropDownList
@@ -19,13 +20,16 @@ class TestDropDownList:
             (LocatorsDropDownList.EIGHTH_QUESTION, LocatorsDropDownList.EIGHTH_ANSWER, FAQDropDownList.EIGHTH_QUESTION),
         ]
     )
+    @allure.title("Проверка вопроса FAQ: {question}")
+    @allure.step("Тестируем раскрытие вопроса: '{question}'")
     def test_drop_down_list(self, driver, locator_question, locator_answer, question):
-        methods_drop_down_list = PageDropDownList(driver)
-        methods_drop_down_list.scroll_to_element(locator_question)
-        methods_drop_down_list.click_on_the_question(locator_question)
+        page = PageDropDownList(driver)
 
-        question_text = methods_drop_down_list.get_text_faq(locator_question)
-        answer_text = methods_drop_down_list.get_text_faq(locator_answer)
+        page.scroll_to_element(locator_question)
+        page.click_on_the_question(locator_question)
 
-        assert question_text == question, f"Текст вопроса не совпадает не соответствует ожидаемому"
+        question_text = page.get_text_faq(locator_question)
+        answer_text = page.get_text_faq(locator_answer)
+
+        assert question_text == question, "Текст вопроса не соответствует ожидаемому"
         assert answer_text == FAQDropDownList.FaqList[question_text], "Ответ не соответствует тексту вопроса"

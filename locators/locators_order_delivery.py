@@ -7,7 +7,7 @@ class LocatorsOrderDelivery:
     BUTTON_ORDER_FROM_ABOVE = (By.CSS_SELECTOR, '.Button_Button__ra12g')
 
     #Кнопка заказать внизу страницы
-    BUTTON_ORDER_BOTTOM_OF_THE_PAGE = (By.CSS_SELECTOR, '.Button_Button__ra12g.Button_UltraBig__UU3Lp')
+    BUTTON_ORDER_BOTTOM_OF_THE_PAGE = (By.XPATH, "//div[contains(@class, 'Home_FinishButton')]/button[text()='Заказать']")
 
     #Поле Имя
     FIELD_NAME = (By.XPATH, ".//*[@placeholder='* Имя']")

@@ -1,7 +1,12 @@
 *
 !.gitignore
-!.md
-!src/
-!*.py
+!*.md
+!*.txt
 !*/**/*.py
+!*.py
+!allure_results/*
+!src/
 !Tests/
+!locators/
+!pages/
+!allure_results
